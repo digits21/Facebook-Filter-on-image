@@ -4,7 +4,7 @@
    Author: Jean Ouedraogo
    Date: 04/14/2018
    Orgaisation:Opendarasa
-   
+
     dossier des filtres que nous voulons ajouter a notre photos  
   */
 
@@ -35,7 +35,7 @@
   	 		$source = imagecreatefromjpeg($filter);
             imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);  // resize filter and copy to thumb
 
-  	 		imagecopymerge($destination, $thumb, 500, 500, 0, 0, 256, 256, 60); // merge filter to destination image
+  	 		imagecopymerge($destination, $thumb, 0, 0, 0, 0, $newwidth,$newheight, 60); // merge filter to destination image
             header('Content-type: image/jpg');
             imagejpeg($destination);
             imagedestroy($destination);
@@ -48,7 +48,7 @@
   	 		$thumb = imagecreatetruecolor($newwidth, $newheight);
   	 		$source = imagecreatefrompng($filter);
   	 		imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-  	 		imagecopymerge($destination, $thumb, 500, 500, 0, 0, 256, 256, 60);
+  	 		imagecopymerge($destination, $thumb, 0, 0, 0, 0,$newwidth,$newheight, 60); // the two 0 are the coordinate , les deux 0 sont le coordonnes de la ou le filtre se posera
             header('Content-type: image/png');
             imagepng($destination);
             imagedestroy($destination);
@@ -61,7 +61,7 @@
   	 		$thumb = imagecreatetruecolor($newwidth, $newheight);
   	 		$source = imagecreatefromjpeg($filter);
   	 		imagecopyresized($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-  	 		imagecopymerge($destination, $thumb, 500, 500, 0, 0, 256, 256, 60);
+  	 		imagecopymerge($destination, $thumb, 0, 0, 0, 0,$newwidth,$newheight, 60);
             header('Content-type: image/jpeg');
             imagejpeg($destination);
             imagedestroy($destination);

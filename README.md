@@ -20,10 +20,7 @@ Simple image merging using php (ajout de filtre sur image avec php
  
  `$ git clone https://github.com/digits21/Facebook-Filter-on-image.git`
  
- # Usage (Ulitisation)
  
- - You should have your destination images in the `images` folder (les image que voulez modifier doivent être dans le dossier `images`
- - Filter images should be small  256x 256 and should be in the `filters` folder(Les filtres doivent avoir les dimmensions 256x256 et doivent être dans le dossier `filters`
  
  # Contribution 
  

@@ -41,7 +41,8 @@
             imagedestroy($destination);
             imagedestroy($source);
             imagedestroy($thumb);
-            header("Location:images/".$destination);  // see result 
+            echo $destination;
+            //header("Location:images/".$destination);  // see result 
   	 		break;
   	 	case 'image/png':
   	 		$destination = imagecreatefrompng($sourceImage);
@@ -54,7 +55,8 @@
             imagedestroy($destination);
             imagedestroy($source);
             imagedestroy($thumb);
-            header("Location:images/".$destination);
+            echo $destination;
+            //header("Location:images/".$destination);
   	 		break;
   	 	case 'image/jpeg':
   	 		$destination = imagecreatefromjpeg($sourceImage);
@@ -67,7 +69,8 @@
             imagedestroy($destination);
             imagedestroy($source);
             imagedestroy($thumb);
-            header("Location:images/".$destination);
+            echo $destination;
+            //header("Location:images/".$destination);
   	 		break;
   	 	default:
   	 		echo '<script>alert("Wrong image type")</script>';
